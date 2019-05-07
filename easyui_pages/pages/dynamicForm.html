@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dynamic</title>
+    <link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+    <!-- 这个布局比较复杂，center、west、east
+        其中west 又有center、north、south-->
+    <div data-options="region:'north',split:true" style="height:100px"></div>
+    <div data-options="region:'west',split:true" style="width:300px"></div>
+    <div data-options="region:'center',split:true"></div>
+    <div data-options="region:'east',split:true" style="width:300px"></div>
+</body>
+</html>
