@@ -27,12 +27,14 @@
             包含的布局适应父标签还需要设置 fit 属性为true-->
         <div class="easyui-layout" data-options="fit:true">
             <!-- 用户信息，仅有头像和用户名-->
-            <div data-options="region:'north',disabled:true" style="height:40%">
-                <div id="head" style="width:100%;">
-                    <div id="head_center" style="margin : 10% 0 0 10%">
+            <div data-options="region:'north',disabled:true" style="height:40%;">
+                <div class="easyui-layout" data-options="fit:true">
+                    <div data-options="region:'north'" style="height: 80%; width: 100%; padding:10%">
                         <img id="head_img" src="images/test.png"
                              style="width:80%; height:80%" alt="图片无法显示"/>
-                        <p id="username"> 用户名：掌上明珠</p>
+                    </div>
+                    <div data-options="region:'center'" style="height: 20%; width: 100%; margin: 10%;">
+                        用户名：掌上明珠
                     </div>
                 </div>
             </div>
