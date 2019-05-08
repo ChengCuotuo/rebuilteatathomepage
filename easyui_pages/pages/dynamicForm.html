@@ -48,25 +48,32 @@
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;争知我，倚栏杆处，正恁凝愁。</p>
             </div>
         </div>
-    </div>left
+    </div>
+    <!-- 导航到菜单信息 -->
+    <div data-options="region:'east',disabled:true" style="width:20%;padding-right: 20px;">
+        <div class="easyui-layout" data-options="fit:true">
+            <div data-options="region:'center',disabled:true" style="height:100%"></div>
+        </div>
+    </div>
     <!-- 动态信息 -->
     <div data-options="region:'center',disabled:true">
-        <div id="info" style="width: 100%;">
+        <div class="dynamic" style="width: 100%;">
             <div id="dynamic_head" style="margin-left: 10%; float:left">
-                <div style="height:100%; width:20%;  float:right; margin-right: 56%">
+                <div style="height:100%; width:20%; float:right; margin-right: 56%">
                     <p id="user_name" >test<p>
                     <p id="user_createtime" >2018-11-1</p>
                 </div>
                 <div style="height:100%; width:20%;%">
-                    <img id="user_head" src="images/3.jpg" style="width: 100%;"/>
+                    <img id="user_head" src="images/4.jpg" style="width: 100%;"/>
                 </div>
             </div>
 
-            <div id="body" style="margin-left: 10%;"  style="float:none;">
+            <div class="dynamic_body" style="margin-left: 10%;" style="float:;">
                 <p id="user_discrib">图片的描述</p>
                 <img id="user_photo" style="width: 80%;" src="images/4.jpg"/>
             </div>
-            <div id="foot" style="margin-left: 10%">
+
+            <div class="dynamic_foot" style="margin-left: 10%">
                 <form action="evaluate" method="post" id="good_bad">
                     12
                     <button type="submit" name="good" title="good"
@@ -86,20 +93,65 @@
                 </form>
             </div>
 
-            <div id="dyncommon" style="margin-left: 10%">
+            <div class="dynamic_common" style="margin-left: 10%">
                 <ul>
-                    <li id="commmon1">chunlei : <q>有美女出没</q></li>
-                    <li id="commmon2">chunlei : <q>真好</q></li>
+                    <li class="commmon">chunlei : <q>有美女出没</q></li>
+                    <li class="commmon">chunlei : <q>真好</q></li>
 
                 </ul>
             </div>
         </div>
-    </div>
-    <!-- 导航到菜单信息 -->
-    <div data-options="region:'east',disabled:true" style="width:20%;padding-right: 20px;">
-        <div class="easyui-layout" data-options="fit:true">
-            <div data-options="region:'center',disabled:true" style="height:100%"></div>
+
+        <hr />
+
+        <div class="dynamic" style="width: 100%;">
+            <div id="dynamic_head" style="margin-left: 10%; float:left">
+                <div style="height:100%; width:20%;  float:right; margin-right: 56%">
+                    <p id="user_name" >test<p>
+                    <p id="user_createtime" >2018-11-1</p>
+                </div>
+                <div style="height:100%; width:20%;%">
+                    <img id="user_head" src="images/3.jpg" style="width: 100%;"/>
+                </div>
+            </div>
+
+            <div class="dynamic_body" style="margin-left: 10%;" style="float:none;">
+                <p id="user_discrib">图片的描述</p>
+                <img id="user_photo" style="width: 80%;" src="images/4.jpg"/>
+            </div>
+
+            <div class="dynamic_foot" style="margin-left: 10%">
+                <form action="evaluate" method="post" id="good_bad">
+                    12
+                    <button type="submit" name="good" title="good"
+                            style="width:65px;height:45px;background-image: url('images/good.png')">
+                    </button>
+                    5
+                    <button type="submit" name="bad" title="bad"
+                            style="width:65px;height:45px;background-image: url('images/bad.png')">
+                    </button>
+                </form>
+                <!--用户评论框-->
+                <form action="mycom" method="post" id="myidea">
+                    <input type="text" style="width:80%; height:30px;" name="comment"/>
+                    <input type="submit" value="评论" style="width:60px; height:35px; color:#F00;" name="submitcommin"/>
+                    <input type="hidden" value="动态的id" name="dynamic_id"/>
+                    <input type="hidden" value="当前用户的id" name="common_user_id">
+                </form>
+            </div>
+
+            <div class="dynamic_common" style="margin-left: 10%">
+                <ul>
+                    <li class="commmon">chunlei : <q>有美女出没</q></li>
+                    <li class="commmon">chunlei : <q>真好</q></li>
+
+                </ul>
+            </div>
         </div>
+
+        <hr />
+
     </div>
+
 </body>
 </html>
