@@ -14,21 +14,23 @@
 </head>
 <body>
    <div style="mrgin:0 auto">
-       <div class="easyui-panel" title="用户注册"
+       <div class="easyui-panel" title="用户登录" headerCls=""
             style="width:100%;max-width:400px;padding:30px 60px;"
             data-options="cls:'c6',border:'thin'">
            <form id="ff" method="post">
                <div style="margin-bottom:20px">
                    <input class="easyui-textbox" name="name" style="width:100%"  prompt="请输入用户名"
-                          data-options="label:'用户名:', labelPosition:'before'">
+                          data-options="label:'用户名:', labelPosition:'before',iconCls:'icon-man'">
                </div>
                <div style="margin-bottom:20px">
-                   <input class="easyui-textbox" name="password" style="width:100%" prompt="请输入密码"
-                          data-options="label:'密码:', labelPosition:'before'">
+                   <input class="easyui-textbox" name="password" type="password" style="width:100%" prompt="请输入密码"
+                          data-options="label:'密码:', labelPosition:'before',iconCls:'icon-lock'">
                </div>
-               <div style="text-align:center;padding:5px 0">
-                   <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">注册</a>
-                   <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">清空</a>
+               <div style="padding:10px 0">
+                   <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()"
+                      style="width:35%;">登陆</a>
+                   <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()"
+                      style="width:35%;">清空</a>
                </div>
            </form>
        </div>
