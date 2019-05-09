@@ -16,11 +16,37 @@
         不现实边界 border:false-->
     <!-- 顶部放图标等导航信息 -->
     <div data-options="region:'north',disabled:true" style="height:14%; background-color: #1f637b">
-        <div id="logo" style="height:100%;width:30%; float:left;">
+        <a href="#" class="easyui-menubutton"
+           data-options="menu:'#mm1',iconCls:'icon-edit'"
+           style="margin:20px 100px 0 0;float:right; color:#ffffff">Edit</a>
+        <div id="logo" style="height:100%;width:30%;">
             <a href="#">
                 <img id="go_homepage" src="images/theme.jpg"
-                     style="height:90%;width:80%; margin:0 0 0 20px;" alt="图片无法显示"/>
+                     style="height:90%;width:80%; margin:0 0 0 20px; float: left" alt="图片无法显示"/>
             </a>
+        </div>
+
+        <div id="mm1" style="width:150px;">
+            <div data-options="iconCls:'icon-undo'">Undo</div>
+            <div data-options="iconCls:'icon-redo'">Redo</div>
+            <div class="menu-sep"></div>
+            <div>Cut</div>
+            <div>Copy</div>
+            <div>Paste</div>
+            <div class="menu-sep"></div>
+            <div>
+                <span>Toolbar</span>
+                <div>
+                    <div>Address</div>
+                    <div>Link</div>
+                    <div>Navigation Toolbar</div>
+                    <div>Bookmark Toolbar</div>
+                    <div class="menu-sep"></div>
+                    <div>New Toolbar...</div>
+                </div>
+            </div>
+            <div data-options="iconCls:'icon-remove'">Delete</div>
+            <div>Select All</div>
         </div>
     </div>
     <div data-options="region:'west',disabled:true" style="width:20%;padding-left: 20px;">
