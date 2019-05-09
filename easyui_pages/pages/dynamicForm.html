@@ -15,12 +15,19 @@
         不现实边界 border:false-->
     <!-- 顶部放图标等导航信息 -->
     <div data-options="region:'north',disabled:true" style="height:14%; background-color: #1f637b">
-        <div id="logo" style="height:100%;width:30%">
+        <div id="logo" style="height:100%;width:30%; float:left;">
             <a href="#">
                 <img id="go_homepage" src="images/theme.jpg"
                      style="height:90%;width:80%; margin:0 0 0 20px;" alt="图片无法显示"/>
             </a>
         </div>
+        <!--<div style="padding:30px 0;">-->
+            <!--<a href="#" class="easyui-linkbutton" style="margin:0 20px 0 0;" data-options="iconCls:'icon-add'">Add</a>-->
+            <!--<a href="#" class="easyui-linkbutton" style="margin:0 20px 0 0;" data-options="iconCls:'icon-remove'">Remove</a>-->
+            <!--<a href="#" class="easyui-linkbutton" style="margin:0 20px 0 0;" data-options="iconCls:'icon-save'">Save</a>-->
+            <!--<a href="#" class="easyui-linkbutton" style="margin:0 20px 0 0;" data-options="iconCls:'icon-cut'">Cut</a>-->
+            <!--<a href="#" class="easyui-linkbutton"style="margin:0 20px 0 0;" >Text Button</a>-->
+        <!--</div>-->
     </div>
     <div data-options="region:'west',disabled:true" style="width:20%;padding-left: 20px;">
         <!-- 嵌套布局，也就是在父面板中在此进行布局，所以需要再次进行布局 easyui-layout 同时为了使
@@ -30,11 +37,13 @@
             <div data-options="region:'north',disabled:true" style="height:40%">
                 <div class="easyui-layout" data-options="fit:true">
                     <div data-options="region:'north'" style="height: 80%; width: 80%;">
-                        <img id="head_img" src="images/test.png"
-                             style="width:80%; height:80%" alt="图片无法显示"/>
+                        <a href="#"><img id="head_img" src="images/test.png"
+                             style="width:80%; height:80%;"
+                                         alt="图片无法显示"/>
+                        </a>
                     </div>
                     <div data-options="region:'center'" >
-                        <P style="height: 20%; width: 100%;">&nbsp;&nbsp;用户名：掌上明珠</p>
+                        <P style="height: 20%; width: 100%;"> &nbsp;&nbsp;用户名：掌上明珠</p>
                     </div>
                 </div>
             </div>
@@ -52,7 +61,60 @@
     <!-- 导航到菜单信息 -->
     <div data-options="region:'east',disabled:true" style="width:20%;padding-right: 20px;">
         <div class="easyui-layout" data-options="fit:true">
-            <div data-options="region:'center',disabled:true" style="height:100%"></div>
+            <div data-options="region:'center',disabled:true" style="width:100%;height:100%">
+                <div class="easyui-accordion" data-options="multiple:false">
+                    <div title="早餐"style="overflow:auto;padding:10px;">
+                        <p><a href="#">土豆火腿早餐饼</a></p>
+                        <p><a href="#">十分钟就做好的懒人双皮奶</a></p>
+                        <p><a href="#">快手香蕉派</a></p>
+                    </div>
+                    <div title="下午茶" style="padding:10px;">
+                        <p><a href="#">黄油曲奇</a></p>
+                        <p><a href="#">葡萄奶酥</a></p>
+                        <p><a href="#">糯米糍</a></p>
+                    </div>
+                    <div title="沙拉" style="padding:10px;">
+                        <p><a href="#">外婆的土豆沙拉</a></p>
+                        <p><a href="#">酸奶水果沙拉</a></p>
+                        <p><a href="#">牛油果沙拉</a></p>
+                    </div>
+                    <div title="主食" style="padding:10px;">
+                        <p><a href="#">香菇油饭</a></p>
+                        <p><a href="#">台式卤肉饭</a></p>
+                        <p><a href="#">可乐饼</a></p>
+                    </div>
+                    <div title="酱" style="padding:10px;">
+                        <p><a href="#">山楂糕－山楂酱</a></p>
+                        <p><a href="#">酱黄豆</a></p>
+                        <p><a href="#">焦糖奶油太妃酱</a></p>
+                    </div>
+                    <div title="凉菜" style="padding:10px;">
+                        <p><a href="#">自制凉皮</a></p>
+                        <p><a href="#">凉拌手撕鸡丝</a></p>
+                        <p><a href="#">手撕杏鲍菇</a></p>
+                    </div>
+                    <div title="甜品" style="padding:10px;">
+                        <p><a href="#">基础泡芙</a></p>
+                        <p><a href="#">少女心的香蕉蔓越莓玛芬</a></p>
+                        <p><a href="#">木瓜椰奶冻</a></p>
+                    </div>
+                    <div title="零食" style="padding:10px;">
+                        <p><a href="#">蛋黄酥（古早味）</a></p>
+                        <p><a href="#">Q弹椰汁千层糕（马蹄糕）</a></p>
+                        <p><a href="#">大理石曲奇</a></p>
+                    </div>
+                    <div title="家常菜" style="padding:10px;">
+                        <p><a href="#">拔丝地瓜</a></p>
+                        <p><a href="#">桂花糯米藕</a></p>
+                        <p><a href="#">饭盒水果盒子蛋糕</a></p>
+                    </div>
+                    <div title="小吃" style="padding:10px;">
+                        <p><a href="#">糯米珍珠丸子</a></p>
+                        <p><a href="#">薯片牛油果大虾沙拉</a></p>
+                        <p><a href="#">爽口拌木耳</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 动态信息 -->
@@ -64,13 +126,13 @@
                     <p id="user_createtime" >2018-11-1</p>
                 </div>
                 <div style="height:100%; width:20%;%">
-                    <img id="user_head" src="images/4.jpg" style="width: 100%;"/>
+                    <img id="user_head" src="images/4.jpg" style="width: 100%;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;"/>
                 </div>
             </div>
 
             <div class="dynamic_body" style="margin-left: 10%;" style=";">
                 <p id="user_discrib">图片的描述</p>
-                <img id="user_photo" style="width: 80%;" src="images/4.jpg"/>
+                <img id="user_photo" style="width: 80%;-moz-border-radius:12px;-webkit-border-radius:12px;border-radius:12px;-moz-box-shadow:5px 5px #a6a29e;-webkit-box-shadow: 5px 5px #a6a29e;box-shadow: 5px 5px #a6a29e;" src="images/4.jpg"/>
             </div>
 
             <div class="dynamic_foot" style="margin-left: 10%">
@@ -148,9 +210,7 @@
                 </ul>
             </div>
         </div>
-
         <hr />
-
     </div>
 
 </body>
