@@ -1,0 +1,21 @@
+.dynamic .dynamic_head .user_head {
+    margin-right:20px;float:left;
+    height:100%;
+    width:20%;
+    /*设置圆角*/
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+}
+
+.dynamic .dynamic_body .user_photo{
+    width: 80%;
+    /*设置圆角*/
+    -moz-border-radius:12px;
+    -webkit-border-radius:12px;
+    border-radius:12px;
+    /*设置圆角阴影*/
+    -moz-box-shadow:5px 5px #a6a29e;
+    -webkit-box-shadow: 5px 5px #a6a29e;
+    box-shadow: 5px 5px #a6a29e;
+}
