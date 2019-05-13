@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="../themes/icon.css">
     <link rel="stylesheet" type="text/css" href="dynamicstyle.css">
-    <link rel="stylesheet" type="text/css" href="../themes/color.css">
     <script type="text/javascript" src="../jquery.min.js"></script>
     <script type="text/javascript" src="../jquery.easyui.min.js"></script>
 </head>
@@ -17,31 +16,37 @@
         不现实边界 border:false-->
     <!-- 顶部放图标等导航信息 -->
     <div data-options="region:'north',disabled:true" style="height:14%; background-color: #1f637b">
-        <div style="padding:0 20px 0 0;">
-            <a href="#" class="easyui-menubutton c6"
-               data-options="menu:'#mm1'" style="float:right; margin:20px 20px 0 0;">
-                <img src="images/test.png" style="width:50px; height:50px;"/>
-            </a>
-        </div>
-
-        <div id="logo" style="height:100%;width:30%;float:left;">
+        <a href="#" class="easyui-menubutton"
+           data-options="menu:'#mm1',iconCls:'icon-edit'"
+           style="margin:20px 100px 0 0;float:right; color:#ffffff">Edit</a>
+        <div id="logo" style="height:100%;width:30%;">
             <a href="#">
                 <img id="go_homepage" src="images/theme.jpg"
-                     style="height:90%;width:80%; margin:0 0 0 20px; " alt="图片无法显示"/>
+                     style="height:90%;width:80%; margin:0 0 0 20px; float: left" alt="图片无法显示"/>
             </a>
-        </div>
-
-        <div style="height:100%;width:30%; float:left; font-size:20px;">
-            <a href="#" style="color: #ffffff;float:left; padding:40px 50px 0 0;
-                text-decoration: none;">查看动态</a>
-            <a href="#" style="color: #ffffff;float:left; padding:40px 50px 0 0;
-                text-decoration: none;">发布动态</a>
         </div>
 
         <div id="mm1" style="width:150px;">
+            <div data-options="iconCls:'icon-undo'">Undo</div>
+            <div data-options="iconCls:'icon-redo'">Redo</div>
             <div class="menu-sep"></div>
-            <div>历史动态</div>
-            <div>修改密码</div>
+            <div>Cut</div>
+            <div>Copy</div>
+            <div>Paste</div>
+            <div class="menu-sep"></div>
+            <div>
+                <span>Toolbar</span>
+                <div>
+                    <div>Address</div>
+                    <div>Link</div>
+                    <div>Navigation Toolbar</div>
+                    <div>Bookmark Toolbar</div>
+                    <div class="menu-sep"></div>
+                    <div>New Toolbar...</div>
+                </div>
+            </div>
+            <div data-options="iconCls:'icon-remove'">Delete</div>
+            <div>Select All</div>
         </div>
     </div>
     <div data-options="region:'west',disabled:true" style="width:20%;padding-left: 20px;">
@@ -135,49 +140,8 @@
     <!-- 动态信息 -->
     <div data-options="region:'center',disabled:true">
         <div class="dynamic" style="width: 100%;">
-            <div class="dynamic_head" style="margin-left: 10%; height:80px;">
-                <img class="user_head" src="images/test.png"/>
-                <p class="user_name" style="padding-top:20px;">test</p>
-                <p class="user_createtime" >2018-11-1</p>
-            </div>
-            <div class="dynamic_body" style="margin-left: 10%;">
-                <p class="user_discrib">图片的描述</p>
-                <img class="user_photo" src="images/4.jpg"/>
-            </div>
-            <br />
-            <div class="dynamic_foot" style="margin-left: 10%; ">
-                <form action="evaluate" method="post" id="good_bad" style="float:right;">
-                    <button type="submit" name="good" title="good"
-                            style="width:65px;height:45px;background-image: url('images/good.png')">
-                        12
-                    </button>
-
-                    <button type="submit" name="bad" title="bad"
-                            style="width:65px;height:45px;background-image: url('images/bad.png')">
-                        5
-                    </button>
-                </form>
-                <!--用户评论框-->
-                <form action="mycom" method="post" id="myidea">
-                    <input type="text" style="width:80%; height:30px;" name="comment"/>
-                    <input type="submit" value="评论" style="width:60px; height:35px; color:#F00;" name="submitcommin"/>
-                    <input type="hidden" value="动态的id" name="dynamic_id"/>
-                    <input type="hidden" value="当前用户的id" name="common_user_id">
-                </form>
-            </div>
-
-            <div class="dynamic_common" style="margin-left: 10%">
-                <p class="common">nianzuochen: 有美女</p>
-                <p class="common">nianzuochen: 出没</p>
-            </div>
-        </div>
-
-        <hr />
-
-
-        <div class="dynamic" style="width: 100%;">
-            <div class="dynamic_head" style="margin-left: 10%; height:80px;">
-                <img class="user_head" src="images/3.jpg"/>
+            <div class="dynamic_head" style="margin-left: 10%;">
+                <img class="user_head" src="images/4.jpg" style=""/>
                 <p class="user_name" style="padding-top:20px;">test</p>
                 <p class="user_createtime" >2018-11-1</p>
             </div>

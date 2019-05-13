@@ -19,3 +19,10 @@
     -webkit-box-shadow: 5px 5px #a6a29e;
     box-shadow: 5px 5px #a6a29e;
 }
+
+#release {
+    margin-right:20px;
+    font-size: 16px;
+    text-decoration:none;
+    color:#ffffff
+}
