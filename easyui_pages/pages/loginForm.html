@@ -12,9 +12,10 @@
     <script type="text/javascript" src="../jquery.min.js"></script>
     <script type="text/javascript" src="../jquery.easyui.min.js"></script>
 </head>
+<!-- 添加标签的标注 -->
 <body>
   <center style="margin:150px 0;">
-      <div class="easyui-panel" title="用户登录" headerCls=""
+      <div class="easyui-panel" title="用户登录"
            style="width:100%;max-width:400px;padding:30px 60px;"
            data-options="cls:'c6',border:'thin'">
           <form id="ff" method="post">
@@ -27,7 +28,7 @@
                          data-options="label:'密码:', labelPosition:'before'">
               </div>
               <div style="padding:10px 0">
-                  <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()"
+                  <a href="login" class="easyui-linkbutton" onclick="submitForm()"
                      style="width:35%;">登陆</a>
                   <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()"
                      style="width:35%;">清空</a>

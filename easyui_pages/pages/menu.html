@@ -76,25 +76,26 @@
         </div>
     </div>
 </div>
-<!-- 导航到菜单信息 -->
+<!-- 导航到菜单信息
+    设定各个标签的标识 -->
 <div data-options="region:'east',disabled:true" style="width:20%;padding-right: 20px;">
     <div class="easyui-layout" data-options="fit:true">
         <div data-options="region:'center',disabled:true" style="width:100%;height:100%">
-            <div class="easyui-accordion" data-options="multiple:false">
-                <div title="早餐"style="overflow:auto;padding:10px;">
-                    <p><a href="#">土豆火腿早餐饼</a></p>
-                    <p><a href="#">十分钟就做好的懒人双皮奶</a></p>
-                    <p><a href="#">快手香蕉派</a></p>
+            <div id="menu" class="easyui-accordion" data-options="multiple:false">
+                <div class="categoty" id="zc" title="早餐"style="overflow:auto;padding:10px;">
+                    <p><a href="zc1">土豆火腿早餐饼</a></p>
+                    <p><a href="zc2">十分钟就做好的懒人双皮奶</a></p>
+                    <p><a href="zc3">快手香蕉派</a></p>
                 </div>
-                <div title="下午茶" style="padding:10px;">
-                    <p><a href="#">黄油曲奇</a></p>
-                    <p><a href="#">葡萄奶酥</a></p>
-                    <p><a href="#">糯米糍</a></p>
+                <div class="categoty" id="xwc" title="下午茶" style="padding:10px;">
+                    <p><a href="xwc1">黄油曲奇</a></p>
+                    <p><a href="xwc2">葡萄奶酥</a></p>
+                    <p><a href="xwc3">糯米糍</a></p>
                 </div>
-                <div title="沙拉" style="padding:10px;">
-                    <p><a href="#">外婆的土豆沙拉</a></p>
-                    <p><a href="#">酸奶水果沙拉</a></p>
-                    <p><a href="#">牛油果沙拉</a></p>
+                <div class="categoty" id="sl" title="沙拉" style="padding:10px;">
+                    <p><a href="sl1">外婆的土豆沙拉</a></p>
+                    <p><a href="sl2">酸奶水果沙拉</a></p>
+                    <p><a href="sl3">牛油果沙拉</a></p>
                 </div>
                 <div title="主食" style="padding:10px;">
                     <p><a href="#">香菇油饭</a></p>
@@ -138,13 +139,13 @@
 <!-- 动态信息 -->
 <div data-options="region:'center',disabled:true">
     <div id="info" style="width:100%">
-        <div id="head">
-            <h2>&nbsp;&nbsp;&nbsp;&nbsp;肉松沙拉酱面包（65度汤种）</h2>
-            <img src="images/overview/17.jpg"
+        <div id="introduce">
+            <h2 id="introduce_title">&nbsp;&nbsp;&nbsp;&nbsp;肉松沙拉酱面包（65度汤种）</h2>
+            <img id="introduce_img" src="images/overview/17.jpg"
                  style="width:50%; float:right; padding-right:50px"
                  alt="介绍图片" title="肉松沙拉酱面包（65度汤种）"/>
-            <h3>用料</h3>
-            <ul>
+            <h3 id="introduce_material">用料</h3>
+            <ul id="introduce_content">
                 <li>汤种部分:</li>
                 <li>高筋面粉</li>
                 <li>20克</li>
@@ -164,10 +165,10 @@
             </ul>
         </div>
 
-        <div id="body">
-            <h3>肉松沙拉酱面包（65度汤种）</h3>
-            <ul>
-                <li>
+        <div id="practice">
+            <h3 id="practice_title">肉松沙拉酱面包（65度汤种）</h3>
+            <ul id="practice_content">
+                <li class="step">
                     <h3>1</h3>
                     <p>"先做汤种部分，将水和面粉混合，用手动打蛋器搅拌均匀至无颗粒煤气灶开小火，边加热边搅拌成透明的糊状，大概加热到65度左右千万不要煮沸！注意一定要用不粘锅！不粘锅！不粘锅噢！ </p>
                     <img src="images/operation/200.jpg"/> </li>
