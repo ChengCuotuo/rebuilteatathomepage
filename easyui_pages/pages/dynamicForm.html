@@ -6,165 +6,152 @@
     <link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="../themes/icon.css">
     <link rel="stylesheet" type="text/css" href="dynamicstyle.css">
+    <link rel="stylesheet" type="text/css" href="../themes/color.css">
     <script type="text/javascript" src="../jquery.min.js"></script>
     <script type="text/javascript" src="../jquery.easyui.min.js"></script>
 </head>
 <body class="easyui-layout">
-    <!-- 这个布局比较复杂，center、west、east
-        其中west 又有center、north、south
-        尺寸不可调节，disabled:true
-        不现实边界 border:false-->
-    <!-- 顶部放图标等导航信息 -->
-    <div data-options="region:'north',disabled:true" style="height:14%; background-color: #1f637b">
-        <a href="#" class="easyui-menubutton"
-           data-options="menu:'#mm1',iconCls:'icon-edit'"
-           style="margin:20px 100px 0 0;float:right; color:#ffffff">Edit</a>
-        <div id="logo" style="height:100%;width:30%;">
-            <a href="#">
-                <img id="go_homepage" src="images/theme.jpg"
-                     style="height:90%;width:80%; margin:0 0 0 20px; float: left" alt="图片无法显示"/>
-            </a>
-        </div>
+<!-- 这个布局比较复杂，center、west、east
+    其中west 又有center、north、south
+    尺寸不可调节，disabled:true
+    不现实边界 border:false-->
+<!-- 顶部放图标等导航信息 -->
+<div data-options="region:'north',disabled:true" style="height:14%; background-color: #1f637b">
+    <div style="padding:0 20px 0 0;">
+        <a href="#" class="easyui-menubutton c6"
+           data-options="menu:'#mm1'" style="float:right; margin:20px 20px 0 0;">
+            <img src="images/test.png" style="width:50px; height:50px;"/>
+        </a>
+    </div>
 
-        <div id="mm1" style="width:150px;">
-            <div data-options="iconCls:'icon-undo'">Undo</div>
-            <div data-options="iconCls:'icon-redo'">Redo</div>
-            <div class="menu-sep"></div>
-            <div>历史动态</div>
-            <div>修改密码</div>
-        </div>
+    <div id="logo" style="height:100%;width:30%;float:left;">
+        <a href="#">
+            <img id="go_homepage" src="images/theme.jpg"
+                 style="height:90%;width:80%; margin:0 0 0 20px; " alt="图片无法显示"/>
+        </a>
     </div>
-    <div data-options="region:'west',disabled:true" style="width:20%;padding-left: 20px;">
-        <!-- 嵌套布局，也就是在父面板中在此进行布局，所以需要再次进行布局 easyui-layout 同时为了使
-            包含的布局适应父标签还需要设置 fit 属性为true-->
-        <div class="easyui-layout" data-options="fit:true">
-            <!-- 用户信息，仅有头像和用户名-->
-            <div data-options="region:'north',disabled:true" style="height:40%">
-                <div class="easyui-layout" data-options="fit:true">
-                    <div data-options="region:'north'" style="height: 80%; width: 80%;">
-                        <a href="#"><img id="head_img" src="images/test.png"
-                             style="width:80%; height:80%;"
-                                         alt="图片无法显示"/>
-                        </a>
-                    </div>
-                    <div data-options="region:'center'" >
-                        <P style="height: 20%; width: 100%;"> &nbsp;&nbsp;用户名：掌上明珠</p>
-                    </div>
+
+    <div style="height:100%;width:30%; float:left; font-size:20px;">
+        <a href="#" style="color: #ffffff;float:left; padding:40px 50px 0 0;
+                text-decoration: none;">查看动态</a>
+        <a href="#" style="color: #ffffff;float:left; padding:40px 50px 0 0;
+                text-decoration: none;">发布动态</a>
+        <a href="#" style="color: #ffffff;float:left; padding:40px 50px 0 0;
+                text-decoration: none;">查看菜谱</a>
+    </div>
+
+    <div id="mm1" style="width:150px;">
+        <div>历史动态</div>
+        <div>修改密码</div>
+    </div>
+</div>
+<div data-options="region:'west',disabled:true" style="width:20%;padding-left: 20px;">
+    <!-- 嵌套布局，也就是在父面板中在此进行布局，所以需要再次进行布局 easyui-layout 同时为了使
+        包含的布局适应父标签还需要设置 fit 属性为true-->
+    <div class="easyui-layout" data-options="fit:true">
+        <!-- 用户信息，仅有头像和用户名-->
+        <div data-options="region:'north',disabled:true" style="height:40%">
+            <div class="easyui-layout" data-options="fit:true">
+                <div data-options="region:'north'" style="height: 80%; width: 80%;">
+                    <a href="#"><img id="head_img" src="images/test.png"
+                                     style="width:80%; height:80%;"
+                                     alt="图片无法显示"/>
+                    </a>
                 </div>
-            </div>
-            <!-- 填充 -->
-            <div data-options="region:'south',disabled:true" style="height:60%" >
-                <p>&nbsp;&nbsp;《苏遮幕》[宋]周邦彦 </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;对潇潇、暮雨洒江天，一番洗清秋。渐霜风凄紧，关河冷落残照当楼。</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;是处红衰翠减，苒苒物华休。惟有长江水，无语东流。</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;不忍登高临远，望故乡渺邈，归思难收。叹年来踪迹，何事苦淹留。</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;想佳人、妆楼望，误几回、天际识归舟。</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;争知我，倚栏杆处，正恁凝愁。</p>
-            </div>
-        </div>
-    </div>
-    <!-- 导航到菜单信息 -->
-    <div data-options="region:'east',disabled:true" style="width:20%;padding-right: 20px;">
-        <div class="easyui-layout" data-options="fit:true">
-            <div data-options="region:'center',disabled:true" style="width:100%;height:100%">
-                <div class="easyui-accordion" data-options="multiple:false">
-                    <div title="早餐"style="overflow:auto;padding:10px;">
-                        <p><a href="#">土豆火腿早餐饼</a></p>
-                        <p><a href="#">十分钟就做好的懒人双皮奶</a></p>
-                        <p><a href="#">快手香蕉派</a></p>
-                    </div>
-                    <div title="下午茶" style="padding:10px;">
-                        <p><a href="#">黄油曲奇</a></p>
-                        <p><a href="#">葡萄奶酥</a></p>
-                        <p><a href="#">糯米糍</a></p>
-                    </div>
-                    <div title="沙拉" style="padding:10px;">
-                        <p><a href="#">外婆的土豆沙拉</a></p>
-                        <p><a href="#">酸奶水果沙拉</a></p>
-                        <p><a href="#">牛油果沙拉</a></p>
-                    </div>
-                    <div title="主食" style="padding:10px;">
-                        <p><a href="#">香菇油饭</a></p>
-                        <p><a href="#">台式卤肉饭</a></p>
-                        <p><a href="#">可乐饼</a></p>
-                    </div>
-                    <div title="酱" style="padding:10px;">
-                        <p><a href="#">山楂糕－山楂酱</a></p>
-                        <p><a href="#">酱黄豆</a></p>
-                        <p><a href="#">焦糖奶油太妃酱</a></p>
-                    </div>
-                    <div title="凉菜" style="padding:10px;">
-                        <p><a href="#">自制凉皮</a></p>
-                        <p><a href="#">凉拌手撕鸡丝</a></p>
-                        <p><a href="#">手撕杏鲍菇</a></p>
-                    </div>
-                    <div title="甜品" style="padding:10px;">
-                        <p><a href="#">基础泡芙</a></p>
-                        <p><a href="#">少女心的香蕉蔓越莓玛芬</a></p>
-                        <p><a href="#">木瓜椰奶冻</a></p>
-                    </div>
-                    <div title="零食" style="padding:10px;">
-                        <p><a href="#">蛋黄酥（古早味）</a></p>
-                        <p><a href="#">Q弹椰汁千层糕（马蹄糕）</a></p>
-                        <p><a href="#">大理石曲奇</a></p>
-                    </div>
-                    <div title="家常菜" style="padding:10px;">
-                        <p><a href="#">拔丝地瓜</a></p>
-                        <p><a href="#">桂花糯米藕</a></p>
-                        <p><a href="#">饭盒水果盒子蛋糕</a></p>
-                    </div>
-                    <div title="小吃" style="padding:10px;">
-                        <p><a href="#">糯米珍珠丸子</a></p>
-                        <p><a href="#">薯片牛油果大虾沙拉</a></p>
-                        <p><a href="#">爽口拌木耳</a></p>
-                    </div>
+                <div data-options="region:'center'" >
+                    <P style="height: 20%; width: 100%;"> &nbsp;&nbsp;用户名：掌上明珠</p>
                 </div>
             </div>
         </div>
+        <!-- 填充 -->
+        <div data-options="region:'south',disabled:true" style="height:60%" >
+            <p>&nbsp;&nbsp;《苏遮幕》[宋]周邦彦 </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;对潇潇、暮雨洒江天，一番洗清秋。渐霜风凄紧，关河冷落残照当楼。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;是处红衰翠减，苒苒物华休。惟有长江水，无语东流。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;不忍登高临远，望故乡渺邈，归思难收。叹年来踪迹，何事苦淹留。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;想佳人、妆楼望，误几回、天际识归舟。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;争知我，倚栏杆处，正恁凝愁。</p>
+        </div>
     </div>
-    <!-- 动态信息 -->
-    <div id="dynamicinfo" data-options="region:'center',disabled:true">
-        <div class="dynamic" style="width: 100%;">
-            <div class="dynamic_head" style="margin-left: 10%; height:100px">
-                <img class="user_head" src="images/4.jpg" style=""/>
-                <p class="user_name" style="padding-top:20px;">test</p>
-                <p class="user_createtime" >2018-11-1</p>
-            </div>
-            <div class="dynamic_body" style="margin-left: 10%;">
-                <p class="user_discrib">图片的描述</p>
-                <img class="user_photo" src="images/4.jpg"/>
-            </div>
-            <br />
-            <div class="dynamic_foot" style="margin-left: 10%;">
-                <form action="evaluate" method="post" id="good_bad">
-                    <button type="submit" name="good" title="good"
-                            style="width:65px;height:45px;background-image: url('images/good.png')">
-                        12
-                    </button>
+</div>
+<!-- 导航到菜单信息
+设定各个标签的标识 -->
+<div data-options="region:'east',disabled:true" style="width:20%;padding-right: 20px;">
+    <div class="easyui-layout" data-options="fit:true">
+        <div data-options="region:'center',disabled:true" style="width:100%;height:100%">
+            <ul style="list-style: none;;padding-left: 10px">
+                <li>天天：</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;大江东去浪淘尽多少英雄</li>
+                <br/>
+                <li>乐乐：</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;这是最好的时代，这是最坏的时代</li>
+                <br/>
+                <li>龙应台：</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;我慢慢地、慢慢地了解到，所谓父女母子一场，只不过意味着，你和他的缘分就是：
+                    今生今世不断地在目送他的背影渐行渐远。你站立在小路的这一端，看着他逐渐消失在小路转弯的地方，
+                    而且，他用背影默默告诉你：不必追。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="dynamicinfo" data-options="region:'center',disabled:true">
+    <div id="releaseDynamic" class="easyui-panel" style="padding:10px 0 10px 10px;margin:10px 0;">
+        <div id="releaseDynamic">
+            <input class="easyui-textbox" label="动态描述：" labelPosition="top"
+                   multiline="true" value="" style="width:80%;height:80px">
+            <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-flay'">发布</a>
+            <br /><br />
+            <input class="easyui-filebox" labelPosition="top"
+                   data-options="prompt:'选择上传的图片...'" style="width:90%;">
+            <!-- 将选中的图片缩小并显示在下面 未选中之前应该是不存在的-->
+            <!--
+             <div id="upload" class="easyui-panel" style="display:none;padding:10px 0 10px 10px;margin:10px 0;width:80%;">
 
-                    <button type="submit" name="bad" title="bad"
-                            style="width:65px;height:45px;background-image: url('images/bad.png')">
-                        5
-                    </button>
-                </form>
-
-                <!--用户评论框-->
-                <form action="mycom" method="post" id="myidea">
-                    <input type="text" style="width:80%; height:30px;" name="comment"/>
-                    <input type="submit" value="评论" style="width:60px; height:35px; color:#F00;" name="submitcommin"/>
-                    <input type="hidden" value="动态的id" name="dynamic_id"/>
-                    <input type="hidden" value="当前用户的id" name="common_user_id">
-                </form>
             </div>
+            -->
+        </div>
+    </div>
+    <div class="dynamic" style="width: 100%;">
+        <div class="dynamic_head" style="margin-left: 10%; height:100px">
+            <img class="user_head" src="images/4.jpg" style=""/>
+            <p class="user_name" style="padding-top:20px;">test</p>
+            <p class="user_createtime" >2018-11-1</p>
+        </div>
+        <div class="dynamic_body" style="margin-left: 10%;">
+            <p class="user_discrib">图片的描述</p>
+            <img class="user_photo" src="images/4.jpg"/>
+        </div>
+        <br />
+        <div class="dynamic_foot" style="margin-left: 10%;">
+            <form action="evaluate" method="post" id="good_bad">
+                <button type="submit" name="good" title="good"
+                        style="width:65px;height:45px;background-image: url('images/good.png')">
+                    12
+                </button>
 
-            <div class="dynamic_common" style="margin-left: 10%">
-                <p class="common">nianzuochen: 有美女</p>
-                <p class="common">nianzuochen: 出没</p>
-            </div>
+                <button type="submit" name="bad" title="bad"
+                        style="width:65px;height:45px;background-image: url('images/bad.png')">
+                    5
+                </button>
+            </form>
+
+            <!--用户评论框-->
+            <form action="mycom" method="post" id="myidea">
+                <input type="text" style="width:80%; height:30px;" name="comment"/>
+                <input type="submit" value="评论" style="width:60px; height:35px; color:#F00;" name="submitcommin"/>
+                <input type="hidden" value="动态的id" name="dynamic_id"/>
+                <input type="hidden" value="当前用户的id" name="common_user_id">
+            </form>
         </div>
 
-        <hr />
+        <div class="dynamic_common" style="margin-left: 10%">
+            <p class="common">nianzuochen: 有美女</p>
+            <p class="common">nianzuochen: 出没</p>
+        </div>
     </div>
+
+    <hr />
+</div>
 
 </body>
 </html>
